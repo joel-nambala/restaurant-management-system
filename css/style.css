@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  color: --text-color-1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+/* GENERAL CLASSES */
+.btn {
+  border: none;
+  background-color: #f76707;
+  color: #fff;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* ****************************** */
+/* LOG IN */
+
+.login {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: none;
+}
+
+.login-img {
+  width: 9.4rem;
+  height: 9.4rem;
+  border-radius: 50%;
+}
+
+.login-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem 3.2rem;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.hero {
+  padding: 6.4rem 3.2rem;
+  max-width: 114rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 5.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.hero-paragraph {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 3.8rem;
+  text-align: center;
+  width: 60%;
+}
+
+.btn-xl {
+  margin-bottom: 3.2rem;
+}
+
+/* ************************************* */
+/* MAIN APPLICATION */
+.app {
+  padding: 4rem;
+  background-image: linear-gradient(to bottom right, #faa46a, #f98539);
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 2rem 6rem 0.5rem rgb(97 85 81 / 20%);
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto minmax(70rem, auto);
+}
+
+.nav {
+  background-color: #f9f5f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  grid-column: 1 / -1;
+  position: relative;
+}
+
+.nav-logo {
+  width: 8.4rem;
+  height: 8.4rem;
+  padding: 1.2rem;
+}
+
+.nav-form {
+  position: relative;
+}
+
+.nav-input {
+  border: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+  border-radius: 100px;
+  padding: 1.2rem 2.4rem 1.2rem 3rem;
+}
+
+.nav-input:focus {
+  outline: none;
+  box-shadow: 0 0 1rem #888;
+}
+
+.nav-icon {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  z-index: 2;
+  color: #444;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  height: 100%;
+}
+
+.nav-bookmark,
+.shopping-list {
+  /* padding: 2.4rem 2rem; */
+  height: 100%;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: all 0.4s;
+  letter-spacing: 0.1rem;
+  color: #555;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.nav-bookmark:hover,
+.shopping-list:hover {
+  background-color: #e0dddb;
+}
+
+.bookmark-icon,
+.shopping-icon {
+  color: #f38e82;
+}
+
+.category {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-title {
+  font-size: 2.6rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.category-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.category-item {
+  font-size: 1.8rem;
+}
+
+.category-footer {
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-text:last-child {
+  margin-bottom: 0;
+}
+
+.recipe {
+  background-color: #f9f5f3;
+  padding: 2rem;
+}
+
+.recipe-title {
+  font-size: 2.8rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.recipe-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.8rem;
+}
+
+.recipe-card {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  position: relative;
+}
+
+.recipe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 1;
+}
+
+.recipe-name {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 20%) skewY(-6deg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  /* width: 50%; */
+  line-height: 1.95;
+  text-align: center;
+}
+
+.recipe-name span {
+  webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0.6rem 1.2rem;
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+}
+
+.recipe-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  align-self: end;
+  margin-top: 2.4rem;
+  padding: 0 1rem;
+}
+
+.recipe-icon {
+  font-size: 2rem;
+  color: #f48982;
+  align-self: end;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.recipe-description {
+  grid-column: 1 / -1;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+  padding: 0 1rem;
+}
+
+.recipe-btn {
+  grid-column: 1/-1;
+}
+
+.account {
+  padding: 2rem;
+}
+
+.account-img {
+  height: 10.4rem;
+  width: 10.4rem;
+  border-radius: 50%;
+}
+
+.account-name {
+  margin-top: 1.4rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.account-email,
+.account-phone {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.account-name,
+.account-email,
+.account-phone {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.account-icon {
+  color: #f38e82;
+}
+
+.recipe-msg {
+  font-size: 1.6rem;
+  color: #f38e82;
+}
+
+/* ************************************* */
+/* MODAL WINDOW */
+/* .modal-login {
+  transition: all 0.6s; 
+} */
+
+.login-modal {
+  background-color: #fdd1b5;
+  width: 30%;
+  margin: 3rem;
+  padding: 2.4rem;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+}
+
+.login-modal button {
+  margin-top: 3.2rem;
+}
+
+.login-label {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.login-input {
+  padding: 1.2rem 2.4rem;
+  border: none;
+  margin-bottom: 1.4rem;
+  display: block;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+
+.login-input:focus {
+  outline: 4px solid rgba(247, 103, 7, 0.527);
+  border-radius: 3px;
+}
+
+.shopping-cart {
+  background-color: #fcfaf9;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(100%, 100%);
+  /* padding: 2rem; */
+  width: 40rem;
+  transition: all 0.6s;
+  z-index: 9999;
+}
+
+.shopping-cart-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopping-cart-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+  padding: 1.2rem 2rem;
+}
+
+.shopping-cart-item:hover {
+  background-color: #f9f5f3;
+}
+
+.shopping-cart-img {
+  width: 5.4rem;
+  height: 5.4rem;
+  border-radius: 50%;
+}
+
+.shopping-cart-title {
+  display: block;
+  font-size: 1.2rem;
+  color: #f38e82;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.shopping-cart-price {
+  font-size: 1.4rem;
+}
+
+.shopping-cart-total {
+  font-size: 1.8rem;
+  padding: 1.2rem 2rem;
+  font-weight: 600;
+}
+
+.btn--shop {
+  width: max-content;
+  margin: 1.2rem 2.4rem;
+}
+
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 98;
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+}
+
+.hide {
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.6s;
+}
+
+.shopping-message {
+  font-size: 1.6rem;
+  color: #f38e82;
+  padding: 1.2rem;
+}

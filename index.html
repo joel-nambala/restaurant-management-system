@@ -1,0 +1,175 @@
+spa<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/logo-min.jpg" type="image/jpg" />
+
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS links -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/queries.css" />
+
+    <!-- JavaScript links -->
+    <script defer type="module" src="js/script.js"></script>
+    <title>Restaurant Management System &mdash; Revocafe Restaurant</title>
+  </head>
+  <body>
+    <article class="login">
+      <nav class="login-nav">
+        <img src="img/logo-min.jpg" alt="Logo" class="login-img" />
+        <div class="login-btn">
+          <button class="btn btn--login">Log in</button>
+          <button class="btn btn--create">Create account</button>
+        </div>
+      </nav>
+      <div class="hero">
+        <h1 class="hero-title">Revocafe hotel management system</h1>
+        <p class="hero-paragraph">
+          This application enables you to order food, view our recipes, message
+          us and customize your account. Create an account with us today and
+          enjoy our services
+        </p>
+        <button class="btn btn--create btn-xl">Creat an account</button>
+      </div>
+    </article>
+    <main class="app">
+      <div class="container">
+        <nav class="nav">
+          <img src="img/logo-min.jpg" alt="Revocafe logo" class="nav-logo" />
+          <form class="nav-form">
+            <input
+              type="text"
+              class="nav-input"
+              placeholder="Search with category"
+              required
+            />
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+          </form>
+          <div class="nav-buttons">
+            <p class="nav-bookmark">
+              <i class="fa-solid fa-bookmark bookmark-icon"></i>Bookmarks
+            </p>
+            <p class="shopping-list">
+              <i class="fa-solid fa-cart-shopping shopping-icon"></i>Shopping
+              list
+            </p>
+          </div>
+
+          <div class="shopping-cart">
+            <ul class="shopping-cart-list">
+              <!--
+               <li class="shopping-cart-item">
+                <img
+                  src="img/diet/beef-pilau.jpg"
+                  alt="pilau"
+                  class="shopping-cart-img"
+                />
+                <p class="shopping-cart-name">
+                  <span class="shopping-cart-title">Pizza</span>
+                  <span class="shopping-cart-price">Ksh 300</span>
+                </p>
+              </li> 
+            --></ul>
+
+            <p class="shopping-cart-total">
+              Total: Kshs <span class="shopping-cart-total-value">12000</span>
+            </p>
+            <div class="btn btn--shop">Shop now</div>
+          </div>
+        </nav>
+
+        <article class="category">
+          <h2 class="category-title">Categories</h2>
+          <ul class="category-list">
+            <li class="category-item">Beef</li>
+            <li class="category-item">Rice</li>
+            <li class="category-item">Ugali</li>
+            <li class="category-item">Chapati</li>
+            <li class="category-item">Mandazi</li>
+          </ul>
+          <p class="category-footer footer-text">
+            Copyright &copy; <span class="copy-year">2022</span>. All rights
+            reserved.
+          </p>
+          <p class="footer-text">Created by Joel Nambala</p>
+        </article>
+
+        <article class="recipe">
+          <h2 class="recipe-title">Recipes</h2>
+          <div class="recipe-body">
+            <p class="recipe-msg">Start by searching a recipe category!</p>
+            <!-- <div class="recipe-card">
+              <img
+                src="img/card-pizza.png"
+                alt="Card pizza"
+                class="recipe-img"
+              />
+              <h2 class="recipe-name">
+                <span class="recipe-name--tag">Pizza</span>
+              </h2>
+              <p class="recipe-price">Kshs <span class="recipe-price--tag>560</span></p>
+              <i class="fa-solid fa-bookmark recipe-icon"></i>
+              <p class="recipe-description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
+                asperiores repellat exercitationem delectus porro libero sit qui
+                repellendus quia amet.
+              </p>
+              <button class="btn recipe-btn">Add to cart</button>
+            </div> -->
+          </div>
+        </article>
+
+        <article class="account">
+          <img src="img/users/user-1.jpg" alt="User one" class="account-img" />
+          <h3 class="account-name">
+            <i class="fa-solid fa-user account-icon"></i>Joel
+          </h3>
+          <p class="account-email">
+            <i class="fa-solid fa-envelope account-icon"></i>Email
+          </p>
+          <p class="account-phone">
+            <i class="fa-solid fa-phone account-icon"></i>Phone
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <div class="modal-login hide">
+      <div class="overlay"></div>
+      <form class="login-modal">
+        <label class="login-label" for="username">Username</label>
+        <input
+          type="text"
+          class="login-input login-input--username"
+          id="username"
+          placeholder="username"
+          required
+        />
+        <label class="login-label" for="password">PIN</label>
+        <input
+          type="password"
+          class="login-input login-input--password"
+          id="password"
+          placeholder="PIN"
+          maxlength="4"
+          required
+        />
+        <button class="btn btn--login">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

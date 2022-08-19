@@ -1,0 +1,16 @@
+{
+  "name": "restaurant-management-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "live-server",
+    "concat": "concat -o css/style.concat.css css/style.css css/variables.css css/queries.css"
+  },
+  "author": "joel nambala",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.1"
+  }
+}
